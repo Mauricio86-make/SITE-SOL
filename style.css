@@ -22,8 +22,8 @@ body {
 .logo-container {
     display: flex;
     justify-content: center;
-    width: 150px;
-    margin: 3 auto 3 auto;
+    width: 100px;
+    margin-top: 20px;
 }
 
 .logo-sol {
@@ -38,6 +38,16 @@ body {
     margin-top: 0;
 }
 
+.links-serviços {
+    text-decoration: none;
+    color: black;
+    transition: .5s;
+}
+
+.links-serviços:hover {
+    text-shadow: 0.1em 0.1em 0.1em rgb(199, 97, 12)
+}
+
 .links-buttons {
     position: relative;
     cursor: pointer;
@@ -49,6 +59,7 @@ body {
     color: black;
     text-align: center;
     transition: color 0.3s;
+    font-size: 25px;
 }
 
 .links-buttons:hover {
@@ -225,7 +236,7 @@ summary::after {
 }
 
 .perguntas {
-    height: 560px;
+    height: 620px;
     margin-left: 100px;
     margin-right: 100px;
     border: solid rgb(199, 97, 12);
@@ -267,7 +278,68 @@ summary::after {
     font-size: 20px;
 }
 
+.title-facilidade {
+    text-align: center;
+    margin-top: 200px;
+}
+
+.ventagens-container {
+    background: rgb(199, 97, 12);
+    margin-top: 100px;
+    height: 320px;
+    width: 1000px;
+    text-align: center;
+    margin: 100px auto;
+    font-size: 50px;
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+}
+
+.ventagens {
+    display: flex;
+    padding: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.ventagens-img {
+    margin-top: -50px;
+    height: 120px;
+}
+
+.ventagens-paragrafo {
+    font-size: 15px;
+    margin-top: -15px;
+}
+
+.button-mais-informaçoes {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.mais-informações-link {
+    background: rgb(199, 97, 12);
+    border: none;
+    width: 300px;
+    height: 40px;
+    border-radius: 20px;
+    font-size: 30px;
+    font-weight: lighter;
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0) 100%);
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0) 100%);
+    cursor: pointer;
+    transition: .5s;
+}
+
+.mais-informações-link:hover {
+    color: white;
+
+}
+
 .procedimentos {
+    justify-content: center;
+    align-items: center;
     text-align: center;
     margin: 50px auto 5px auto;
 }
@@ -286,121 +358,4 @@ footer {
     background-color: rgb(32, 30, 30);
     color: #fff;
     text-align: center;
-}
-
-/* CSS já existente */
-
-/* Ajustes gerais para tornar o layout responsivo */
-@media (max-width: 768px) {
-    .box-degrade {
-        padding: 10px 0;
-    }
-
-    .logo-container {
-        width: 100px;
-    }
-
-    .logo-sol {
-        width: 200px;
-    }
-
-    .links {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .links-buttons {
-        width: 100%;
-    }
-
-    .sliders-container {
-        flex-direction: column;
-    }
-
-    .content {
-        margin-bottom: 30px;
-    }
-
-    .slider-container {
-        width: 100%;
-    }
-
-    .container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .Sol {
-        width: 100%;
-    }
-
-    .container-confiança {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .calificações {
-        margin-bottom: 20px;
-        text-align: center;
-    }
-
-    .perguntas {
-        padding: 20px;
-    }
-
-    .titulo-perguntas {
-        font-size: 1.2em;
-    }
-
-    details {
-        margin-bottom: 10px;
-    }
-
-    .localization-2 {
-        padding: 0 10px;
-    }
-
-    .localization {
-        height: 300px;
-    }
-}
-
-/* Ajustes para telas muito pequenas (max-width: 480px) */
-@media (max-width: 480px) {
-    .logo-sol {
-        width: 150px;
-    }
-
-    .links {
-        gap: 10px;
-    }
-
-    .links-buttons {
-        font-size: 15px;
-        
-    }
-
-    .slider-container {
-        width: 100%;
-    }
-
-    .Sol {
-        width: 90%;
-    }
-
-    .calificações {
-        font-size: 0.9em;
-    }
-
-    .perguntas {
-        padding: 10px;
-    }
-
-    .titulo-perguntas {
-        font-size: 1em;
-    }
-
-    .localization {
-        height: 250px;
-    }
 }
