@@ -1,5 +1,4 @@
 
-
 let currentSlideIndex1 = 0;
 let currentSlideIndex2 = 0;
 let currentSlideIndex3 = 0; // Novo índice para o slider de sobrancelha
@@ -49,4 +48,3 @@ document.querySelectorAll('.slider-container').forEach((container, index) => {
     container.classList.add(`slider${index + 1}`);
     container.querySelector('.slide').style.display = 'block';
 });
-
