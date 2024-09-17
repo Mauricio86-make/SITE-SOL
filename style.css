@@ -115,6 +115,45 @@ button:hover span:nth-child(3) {
 button:hover span:nth-child(4) {
     top: 0;
 }
+.services-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+    top: 100%;
+    width: 150%;
+    border-radius: 15px;
+}
+
+.submenu li {
+    padding: 8px 12px;
+}
+
+.submenu li a {
+    text-decoration: none;
+    color: #333;
+    transition: .5s;
+}
+
+.submenu li a:hover {
+    color: rgb(199, 97, 12);
+}
+.services-dropdown:hover .submenu {
+    display: block;
+}
+
+.submenu li:hover {
+    background-color: #f1f1f1;
+}
 
 .sliders-container {
     display: flex;
