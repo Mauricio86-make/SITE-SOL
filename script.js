@@ -43,6 +43,11 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+document.getElementById("curso-esmaltacao").addEventListener("click", function(event) {
+    event.preventDefault(); // Impede o comportamento padrão do link
+    window.open('./assets/curso-esmaltacao-gel.pdf', '_blank'); // Caminho para o PDF
+});
+
 // Inicializa os sliders para mostrar o primeiro slide
 document.querySelectorAll('.slider-container').forEach((container, index) => {
     container.classList.add(`slider${index + 1}`);
