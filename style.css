@@ -155,6 +155,95 @@ button:hover span:nth-child(4) {
     background-color: #f1f1f1;
 }
 
+/* Estilos para o modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    cursor: pointer;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para o carrossel */
+.carousel {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Garante que nada saia da área visível */
+}
+
+#carousel-image {
+    width: auto;
+    height: auto;
+    max-width: 100%;  /* Limita a largura ao tamanho do modal */
+    max-height: 80vh; /* Limita a altura para caber na tela, mantendo a proporção */
+    object-fit: contain; /* Garante que a imagem fique dentro do contêiner sem cortes */
+    border-radius: 8px;
+    border: 1px solid #ccc;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* Centraliza verticalmente */
+    padding: 15px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    user-select: none;
+    background-color: rgb(199, 97, 12);
+    border-radius: 50%;
+}
+
+.prev {
+    left: 2px; /* Move a seta para fora do contorno da imagem */
+}
+
+.next {
+    right: 2px; /* Move a seta para fora do contorno da imagem */
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
+/* .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.gallery img {
+    width: 48%;
+    max-width: 300px;
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+} */
+
+
 .sliders-container {
     display: flex;
     justify-content: space-around;
