@@ -132,6 +132,7 @@ button:hover span:nth-child(4) {
     top: 100%;
     width: 150%;
     border-radius: 15px;
+    width: 240px;
 }
 
 .submenu li {
@@ -146,13 +147,16 @@ button:hover span:nth-child(4) {
 
 .submenu li a:hover {
     color: rgb(199, 97, 12);
+    text-decoration: underline;
 }
 .services-dropdown:hover .submenu {
     display: block;
+    cursor: pointer;
 }
 
 .submenu li:hover {
     background-color: #f1f1f1;
+    
 }
 
 /* Estilos para o modal */
@@ -167,7 +171,7 @@ button:hover span:nth-child(4) {
     background-color: rgba(0, 0, 0, 0.5);
     justify-content: center; /* Centraliza horizontalmente */
     align-items: center; /* Centraliza verticalmente */
-    cursor: pointer;
+    
 }
 
 .modal-content {
@@ -180,6 +184,7 @@ button:hover span:nth-child(4) {
     text-align: center;
     position: relative;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
 }
 
 /* Estilos para o carrossel */
@@ -212,20 +217,22 @@ button:hover span:nth-child(4) {
     font-size: 20px;
     transition: 0.6s ease;
     user-select: none;
-    background-color: rgb(199, 97, 12);
+    background-color: transparent;
     border-radius: 50%;
 }
 
 .prev {
     left: 2px; /* Move a seta para fora do contorno da imagem */
+    color: rgb(199, 97, 12);
 }
 
 .next {
     right: 2px; /* Move a seta para fora do contorno da imagem */
+    color: rgb(199, 97, 12);
 }
 
 .prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(196, 190, 190, 0.8);
 }
 
 
