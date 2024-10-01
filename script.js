@@ -1,4 +1,4 @@
-
+// Slider Functionality (Mantido conforme seu código original)
 let currentSlideIndex1 = 0;
 let currentSlideIndex2 = 0;
 let currentSlideIndex3 = 0; // Novo índice para o slider de sobrancelha
@@ -41,20 +41,35 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         });
     });
+
+    // Inicializa os sliders para mostrar o primeiro slide
+    document.querySelectorAll('.slider-container').forEach((container, index) => {
+        container.classList.add(`slider${index + 1}`);
+        container.querySelector('.slide').style.display = 'block';
+    });
 });
 
-// Pega o modal
+// Modal and Carousel Functionality
+
 // Pega o modal
 var modal = document.getElementById("modal");
 
-// Pega o link que abre o modal
+// Pega os links que abrem o modal
 var cursoEsmaltacao = document.getElementById("curso-esmaltacao");
+var cursoCilios = document.getElementById("curso-cilios");
 
 // Pega o elemento <span> que fecha o modal
 var closeModal = document.getElementsByClassName("close")[0];
 
-// Lista de imagens do carrossel
-var images = [
+// Pega os elementos das setas
+var prev = document.getElementById("prev");
+var next = document.getElementById("next");
+
+// Pega o elemento de imagem do carrossel
+var carouselImage = document.getElementById("carousel-image");
+
+// Listas de imagens para cada curso
+var imagesEsmaltacao = [
     "images/pdf1.jpg",
     "images/pdf2.jpg",
     "images/pdf3.jpg",
@@ -66,26 +81,49 @@ var images = [
     "images/pdf9.jpg"
 ];
 
+var imagesCilios = [
+    "images/cilios1.jpg",
+    "images/cilios2.jpg",
+    "images/cilios3.jpg",
+    "images/cilios4.jpg",
+    "images/cilios5.jpg",
+    "images/cilios6.jpg",
+    "images/cilios7.jpg",
+    "images/cilios8.jpg",
+    "images/cilios9.jpg"
+];
+
 // Posição atual do carrossel
 var currentImageIndex = 0;
 
-// Pega os elementos das setas
-var prev = document.getElementById("prev");
-var next = document.getElementById("next");
-
-// Pega o elemento de imagem do carrossel
-var carouselImage = document.getElementById("carousel-image");
+// Array atual de imagens sendo exibidas
+var currentImages = [];
 
 // Função para atualizar a imagem do carrossel
 function updateCarouselImage() {
-    carouselImage.src = images[currentImageIndex];
+    if (currentImages.length > 0) {
+        carouselImage.src = currentImages[currentImageIndex];
+    }
 }
 
-// Quando o usuário clicar no link "Curso Esmaltação em Gel", abre o modal
+// Função para abrir o modal com as imagens específicas
+function openModal(images) {
+    currentImages = images;
+    currentImageIndex = 0;
+    updateCarouselImage();
+    modal.style.display = "block";
+}
+
+// Quando o usuário clicar no link "Curso Esmaltação em Gel", abre o modal com imagensEsmaltacao
 cursoEsmaltacao.onclick = function (event) {
     event.preventDefault();  // Evita o comportamento padrão do link
-    modal.style.display = "block";
-    updateCarouselImage(); // Mostra a primeira imagem
+    openModal(imagesEsmaltacao);
+}
+
+// Quando o usuário clicar no link "Curso Extensão de Cílios", abre o modal com imagesCilios
+cursoCilios.onclick = function (event) {
+    event.preventDefault();  // Evita o comportamento padrão do link
+    openModal(imagesCilios);
 }
 
 // Quando o usuário clicar no <span> (x), fecha o modal
@@ -102,18 +140,16 @@ window.onclick = function (event) {
 
 // Navegar para a imagem anterior
 prev.onclick = function () {
-    currentImageIndex = (currentImageIndex === 0) ? images.length - 1 : currentImageIndex - 1;
-    updateCarouselImage();
+    if (currentImages.length > 0) {
+        currentImageIndex = (currentImageIndex === 0) ? currentImages.length - 1 : currentImageIndex - 1;
+        updateCarouselImage();
+    }
 }
 
 // Navegar para a próxima imagem
 next.onclick = function () {
-    currentImageIndex = (currentImageIndex === images.length - 1) ? 0 : currentImageIndex + 1;
-    updateCarouselImage();
+    if (currentImages.length > 0) {
+        currentImageIndex = (currentImageIndex === currentImages.length - 1) ? 0 : currentImageIndex + 1;
+        updateCarouselImage();
+    }
 }
-
-// Inicializa os sliders para mostrar o primeiro slide
-document.querySelectorAll('.slider-container').forEach((container, index) => {
-    container.classList.add(`slider${index + 1}`);
-    container.querySelector('.slide').style.display = 'block';
-});
