@@ -90,7 +90,9 @@ var imagesCilios = [
     "images/cilios6.jpg",
     "images/cilios7.jpg",
     "images/cilios8.jpg",
-    "images/cilios9.jpg"
+    "images/cilios9.jpg",
+    "images/cilios10.jpg",
+    "images/cilios11.jpg"
 ];
 
 // Posição atual do carrossel
