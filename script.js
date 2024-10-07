@@ -70,29 +70,29 @@ var carouselImage = document.getElementById("carousel-image");
 
 // Listas de imagens para cada curso
 var imagesEsmaltacao = [
-    "images/pdf1.jpg",
-    "images/pdf2.jpg",
-    "images/pdf3.jpg",
-    "images/pdf4.jpg",
-    "images/pdf5.jpg",
-    "images/pdf6.jpg",
-    "images/pdf7.jpg",
-    "images/pdf8.jpg",
-    "images/pdf9.jpg"
+    "images/curso-esmalte1.jpg",
+    "images/curso-esmalte2.jpg",
+    "images/curso-esmalte3.jpg",
+    "images/curso-esmalte4.jpg",
+    "images/curso-esmalte5.jpg",
+    "images/curso-esmalte6.jpg",
+    "images/curso-esmalte7.jpg",
+    "images/curso-esmalte8.jpg",
+    "images/curso-esmalte9.jpg"
 ];
 
 var imagesCilios = [
-    "images/cilios1.jpg",
-    "images/cilios2.jpg",
-    "images/cilios3.jpg",
-    "images/cilios4.jpg",
-    "images/cilios5.jpg",
-    "images/cilios6.jpg",
-    "images/cilios7.jpg",
-    "images/cilios8.jpg",
-    "images/cilios9.jpg",
-    "images/cilios10.jpg",
-    "images/cilios11.jpg"
+    "images/curso-cilios1.jpg",
+    "images/curso-cilios2.jpg",
+    "images/curso-cilios3.jpg",
+    "images/curso-cilios4.jpg",
+    "images/curso-cilios5.jpg",
+    "images/curso-cilios6.jpg",
+    "images/curso-cilios7.jpg",
+    "images/curso-cilios8.jpg",
+    "images/curso-cilios9.jpg",
+    "images/curso-cilios10.jpg",
+    "images/curso-cilios11.jpg"
 ];
 
 // Posição atual do carrossel
