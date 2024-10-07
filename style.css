@@ -237,7 +237,7 @@ button:hover span:nth-child(4) {
 }
 
 
-/* .gallery {
+ .gallery {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -249,7 +249,7 @@ button:hover span:nth-child(4) {
     height: auto;
     border: 1px solid #ccc;
     border-radius: 8px;
-} */
+} 
 
 
 .sliders-container {
