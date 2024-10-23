@@ -479,6 +479,8 @@ summary {
     cursor: pointer;
     font-size: 20px;
     border-radius: 5px;
+    background: rgb(199, 97, 12);
+    
 }
 
 details p {
