@@ -55,6 +55,9 @@ document.addEventListener('DOMContentLoaded', function () {
 var modal = document.getElementById("modal");
 
 // Pega os links que abrem o modal
+var extencaoDeCilios = document.getElementById("extensao-de-cilios");
+var esmaltacaoEmGel = document.getElementById("esmaltacao-em-gel");
+var sobrancelha = document.getElementById("sobrancelha-service");
 var cursoEsmaltacao = document.getElementById("curso-esmaltacao");
 var cursoCilios = document.getElementById("curso-cilios");
 
@@ -69,6 +72,20 @@ var next = document.getElementById("next");
 var carouselImage = document.getElementById("carousel-image");
 
 // Listas de imagens para cada curso
+
+var imagesExtencao = [
+    "images/textoCilios.jpg"
+];
+
+var imagesEsmaltacaoGel = [
+    "images/textoEsmaltacao.jpg"
+];
+
+var imagesSobrancelha = [
+    "images/textoSobrancelha.jpg"
+];
+
+
 var imagesEsmaltacao = [
     "images/curso-esmalte1.jpg",
     "images/curso-esmalte2.jpg",
@@ -95,6 +112,8 @@ var imagesCilios = [
     "images/curso-cilios11.jpg"
 ];
 
+
+
 // Posição atual do carrossel
 var currentImageIndex = 0;
 
@@ -116,6 +135,22 @@ function openModal(images) {
     modal.style.display = "block";
 }
 
+
+
+extencaoDeCilios.onclick = function (event) {
+    event.preventDefault();  // Evita o comportamento padrão do link
+    openModal(imagesExtencao);
+}
+
+esmaltacaoEmGel.onclick = function (event) {
+    event.preventDefault();  // Evita o comportamento padrão do link
+    openModal(imagesEsmaltacaoGel);
+}
+
+sobrancelha.onclick = function (event) {
+    event.preventDefault();  // Evita o comportamento padrão do link
+    openModal(imagesSobrancelha);
+}
 // Quando o usuário clicar no link "Curso Esmaltação em Gel", abre o modal com imagensEsmaltacao
 cursoEsmaltacao.onclick = function (event) {
     event.preventDefault();  // Evita o comportamento padrão do link
@@ -153,5 +188,21 @@ next.onclick = function () {
     if (currentImages.length > 0) {
         currentImageIndex = (currentImageIndex === currentImages.length - 1) ? 0 : currentImageIndex + 1;
         updateCarouselImage();
+    }
+}
+
+function openModal(images) {
+    currentImages = images;
+    currentImageIndex = 0;
+    updateCarouselImage();
+    modal.style.display = "block";
+
+    // Ocultar as setas se houver apenas uma imagem
+    if (currentImages.length === 1) {
+        prev.style.display = 'none';
+        next.style.display = 'none';
+    } else {
+        prev.style.display = 'block';
+        next.style.display = 'block';
     }
 }

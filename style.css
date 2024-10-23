@@ -1,5 +1,4 @@
-
-    * {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -45,8 +44,14 @@ body {
     transition: .5s;
 }
 
-.links-serviços:hover {
-    text-shadow: 0.1em 0.1em 0.1em rgb(199, 97, 12)
+.links-serviços:hover::after {
+    text-shadow: 0.1em 0.1em 0.1em rgb(199, 97, 12);
+    white-space: nowrap;
+    transition: opacity 0.5s;
+    pointer-events: none;
+    content: "AGENDAR";
+    opacity: 1;
+
 }
 
 .links-buttons {
@@ -116,6 +121,7 @@ button:hover span:nth-child(3) {
 button:hover span:nth-child(4) {
     top: 0;
 }
+
 .services-dropdown {
     position: relative;
     display: inline-block;
@@ -124,7 +130,7 @@ button:hover span:nth-child(4) {
 .submenu {
     display: none;
     position: absolute;
-    background-color: #fff;
+    background-color: #ffff;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
     list-style: none;
@@ -144,20 +150,24 @@ button:hover span:nth-child(4) {
     text-decoration: none;
     color: #333;
     transition: .5s;
+    /* cursor: pointer; */
+
 }
 
 .submenu li a:hover {
     color: rgb(199, 97, 12);
     text-decoration: underline;
 }
+
 .services-dropdown:hover .submenu {
     display: block;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .submenu li:hover {
-    background-color: #f1f1f1;
-    
+    /* background-color: #f1f1f1; */
+    background-color: transparent;
+
 }
 
 /* Estilos para o modal */
@@ -170,9 +180,11 @@ button:hover span:nth-child(4) {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
-    justify-content: center; /* Centraliza horizontalmente */
-    align-items: center; /* Centraliza verticalmente */
-    
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    align-items: center;
+    /* Centraliza verticalmente */
+
 }
 
 .modal-content {
@@ -180,12 +192,14 @@ button:hover span:nth-child(4) {
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 80%;
-    max-width: 700px;
+    width: 100vh;
+    max-width: 450px;
     text-align: center;
     position: relative;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
+    /* cursor: pointer; */
+    border-radius: 5px;
+    margin-top: 30px;
 }
 
 /* Estilos para o carrossel */
@@ -194,28 +208,34 @@ button:hover span:nth-child(4) {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden; /* Garante que nada saia da área visível */
+    overflow: hidden;
+    /* Garante que nada saia da área visível */
 }
 
 #carousel-image {
     width: auto;
     height: auto;
-    max-width: 100%;  /* Limita a largura ao tamanho do modal */
-    max-height: 80vh; /* Limita a altura para caber na tela, mantendo a proporção */
-    object-fit: contain; /* Garante que a imagem fique dentro do contêiner sem cortes */
+    max-width: 100%;
+    /* Limita a largura ao tamanho do modal */
+    max-height: 80vh;
+    /* Limita a altura para caber na tela, mantendo a proporção */
+    object-fit: contain;
+    /* Garante que a imagem fique dentro do contêiner sem cortes */
     border-radius: 8px;
     border: 1px solid #ccc;
 }
 
-.prev, .next {
+.prev,
+.next {
     cursor: pointer;
     position: absolute;
     top: 50%;
-    transform: translateY(-50%); /* Centraliza verticalmente */
+    transform: translateY(-50%);
+    /* Centraliza verticalmente */
     padding: 15px;
     color: white;
-    font-weight: bold;
-    font-size: 20px;
+    font-weight: initial;
+    font-size: 30px;
     transition: 0.6s ease;
     user-select: none;
     background-color: transparent;
@@ -223,21 +243,36 @@ button:hover span:nth-child(4) {
 }
 
 .prev {
-    left: 2px; /* Move a seta para fora do contorno da imagem */
+    left: 8px;
+    /* Move a seta para fora do contorno da imagem */
     color: rgb(199, 97, 12);
 }
 
 .next {
-    right: 2px; /* Move a seta para fora do contorno da imagem */
+    right: 8px;
+    /* Move a seta para fora do contorno da imagem */
     color: rgb(199, 97, 12);
 }
 
-.prev:hover, .next:hover {
-    background-color: rgba(196, 190, 190, 0.8);
+.prev:hover,
+.next:hover {
+    /* background-color: rgba(196, 190, 190, 0.8); */
+    font-size: 40px;
 }
 
+.close {
+    position:relative;
+    cursor: pointer;
+    font-size: 30px;
+    color: black;
+    transition: 0.6s ease;
+}
 
- .gallery {
+.close:hover {
+    color: rgb(199, 97, 12)
+}
+
+.gallery {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -249,7 +284,7 @@ button:hover span:nth-child(4) {
     height: auto;
     border: 1px solid #ccc;
     border-radius: 8px;
-} 
+}
 
 
 .sliders-container {
@@ -306,17 +341,20 @@ button:hover span:nth-child(4) {
 
 .arrow {
     color: #fff;
-    font-size: 24px;
+    font-size: 30px;
     cursor: pointer;
     user-select: none;
-    background: rgba(0, 0, 0, 0.5);
+    /* background: rgba(0, 0, 0, 0.5); */
     padding: 8px;
     border-radius: 50%;
-    transition: background 0.3s ease;
+    transition: 0.6s ease;
 }
 
 .arrow:hover {
-    background: rgba(0, 0, 0, 0.8);
+    /* background: rgba(0, 0, 0, 0.8); */
+    width: 30px;
+    color: rgb(199, 97, 12);
+    font-size: 40px;
 }
 
 .Sol {
@@ -481,7 +519,7 @@ summary::after {
 
 .mais-informações-link:hover {
     color: white;
-   
+
 
 }
 
