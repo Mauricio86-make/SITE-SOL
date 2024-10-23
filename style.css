@@ -421,7 +421,8 @@ summary::after {
     margin-right: 100px;
     border: solid rgb(199, 97, 12);
     border-radius: 10px;
-    box-shadow: 2px 2px 5px rgb(199, 97, 12);
+    box-shadow: 10px 10px 10px rgb(0, 0, 0);
+    background-color: rgb(199, 97, 12);
 }
 
 .titulo-perguntas {
@@ -487,10 +488,12 @@ details p {
 }
 
 /* //------------novo codigo------------------------// */
+
 .title-facilidade {
     text-align: center;
     margin-top: 200px;
     font-style: oblique;
+    
 }
 
 .ventagens-container {
@@ -503,6 +506,7 @@ details p {
     font-size: 50px;
     -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
     mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 100%);
+    border-radius: 5px;
 }
 
 .ventagens {
@@ -511,6 +515,7 @@ details p {
     justify-content: center;
     align-items: center;
     font-style: oblique;
+    
 }
 
 .ventagens-img {
@@ -605,6 +610,7 @@ footer {
     }
 
     .coment {
+        position: relative;
         padding: 10px;
         font-size: 14px;
         /* Diminui o tamanho da fonte para dispositivos móveis */
