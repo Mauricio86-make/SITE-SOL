@@ -261,7 +261,7 @@ button:hover span:nth-child(4) {
 }
 
 .close {
-    position:relative;
+    position: relative;
     cursor: pointer;
     font-size: 30px;
     color: black;
@@ -454,12 +454,39 @@ summary::after {
     overflow: hidden;
 
 }
-
+/* 
 .pergunta-resposta {
     font-size: 20px;
     font-style: oblique;
+} */
+
+/* //--------------novo codigo--------------------------// */
+details summary {
+    list-style: none;
+    /* Remove o estilo da lista */
 }
 
+details[open] summary::before,
+/* Remove a seta quando o details estiver aberto */
+details summary::before {
+    content: '';
+    /* Remove a seta */
+}
+
+/* Estilização adicional opcional para melhorar o visual */
+summary {
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+details p {
+    margin: -15px 5px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* //------------novo codigo------------------------// */
 .title-facilidade {
     text-align: center;
     margin-top: 200px;
